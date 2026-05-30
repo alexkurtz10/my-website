@@ -125,36 +125,41 @@ section#my-projects {
     background-color: var(--base-color);
 }
 
-.grid-container {
+.flex-container {
     margin-top: 3em;
     margin-bottom: 3em;
     display: flex;
-    flex-direction: column;
     width: 100%;
     gap: 1em;
+    align-items: center;
 }
 
-.grid-container button {
-    height: 100%;
-    width: 100%;
+.flex-contained img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.flex-container button {
+    align-self: center;
+    flex-shrink: 0;
     border-radius: .5em;
     transition: 100ms ease;
 }
 
-.grid-container button:hover {
-    scale: 1.05;
+.flex-container button:hover {
+    transform: scale(1.05);
+}
+
+.flex-container button:active {
+    transform: scale(0.98);
 }
 
 footer {
-    margin: 1em auto 3em auto;
-    width: min(1000px, 100%)
-}
-
-footer ul {
     display: flex;
-    align-items: left;
-    list-style-type: none;
-    gap: 5em;
+    justify-content: flex-start;
+    gap: 2em;
+    flex-wrap: wrap;
 }
 
 footer a {
